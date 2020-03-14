@@ -1,8 +1,10 @@
 pipeline {
-    docker {
-        image 'alpine'
-        label 'alpine-node'
-        args  '-v /tmp:/tmp'
+    agent{
+        docker {
+            image 'alpine'
+            label 'alpine-node'
+            args  '-v /tmp:/tmp'
+        }
     }
     stages{
         stage('Install'){
