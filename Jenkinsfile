@@ -17,9 +17,9 @@ pipeline {
                         allowMissing: false,
                         alwaysLinkToLastBuild: true,
                         keepAll: true,
-                        reportDir: 'test/report',
-                        reportFiles: 'cucumber_report.html',
-                        reportName: 'My cucumber reports',
+                        reportDir: 'test/report/cucumber_report.html',
+                        reportFiles: 'cucumber.html',
+                        reportName: 'Cucumber',
                         reportTitles: 'The Report'
                     ]
                 )
