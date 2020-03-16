@@ -12,15 +12,14 @@ pipeline {
             steps {
                 sh 'npm install'
                 sh 'npm run test'
-                publishHTML (
-                    target : [
-                        allowMissing: false,
-                        alwaysLinkToLastBuild: true,
-                        keepAll: true,
-                        reportDir: 'test/report',
-                        reportFiles: 'cucumber_report.html',
-                        reportName: 'reports',
-                        reportTitles: 'The Report'
+                publishHTML(
+                    [
+                        allowMissing: false, 
+                        alwaysLinkToLastBuild: false, 
+                        keepAll: false, reportDir: 'test/report/', 
+                        reportFiles: 'cucumber_report.html', 
+                        reportName: 'HTML Report', 
+                        reportTitles: ''
                     ]
                 )
             }
