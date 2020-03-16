@@ -1,11 +1,15 @@
 pipeline {
     agent {
-        label 'master'
+        docker {
+            image 'node:12-alpine'
+        }
     }
     stages {
         stage('Test') {
             steps {
                 sh 'whoami'
+                sh 'node --version'
+                sh 'npm --version'
                 sh 'npm install'
             }
         }
