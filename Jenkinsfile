@@ -25,35 +25,40 @@ pipeline {
             }
         }
         stage('Expose report') {
-            archive "**/cucumber_report.json"
-            cucumber '**/cucumber_report.json'
+            steps{
+                archive "test/report/cucumber_report.json"
+                cucumber 'test/report/cucumber_report.json'
+            }
+            
         }
         stage('Import results to Xray') {
+            steps{
 
-            def description = "[BUILD_URL|${env.BUILD_URL}]"
-            def labels = '["regression","automated_regression"]'
-            def environment = "DEV"
-            def testExecutionFieldId = 10008
-            // def testEnvironmentFieldName = "customfield_10132"
-            def projectKey = "CALC"
-            def xrayConnectorId = 'CLOUD-cb430a15-4fa5-4c52-bec2-7606bd1e7357'
-            def info = '''{
-                    "fields": {
-                        "project": {
-                             "key": "''' + projectKey + '''"
-                        },
-                        "labels":''' + labels + ''',
-                        "description":"''' + description + '''",
-                        "summary": "Automated Regression Execution @ ''' + env.BUILD_TIME + ' ' + environment + ''' " ,
-                        "issuetype": {
-                            "id": "''' + testExecutionFieldId + '''"
-                        },
-                    }
-                }'''
+                def description = "[BUILD_URL|${env.BUILD_URL}]"
+                def labels = '["regression","automated_regression"]'
+                def environment = "DEV"
+                def testExecutionFieldId = 10008
+                // def testEnvironmentFieldName = "customfield_10132"
+                def projectKey = "CALC"
+                def xrayConnectorId = 'CLOUD-cb430a15-4fa5-4c52-bec2-7606bd1e7357'
+                def info = '''{
+                        "fields": {
+                            "project": {
+                                "key": "''' + projectKey + '''"
+                            },
+                            "labels":''' + labels + ''',
+                            "description":"''' + description + '''",
+                            "summary": "Automated Regression Execution @ ''' + env.BUILD_TIME + ' ' + environment + ''' " ,
+                            "issuetype": {
+                                "id": "''' + testExecutionFieldId + '''"
+                            },
+                        }
+                    }'''
 
-                echo info
+                    echo info
 
-                step([$class: 'XrayImportBuilder', endpointName: '/cucumber/multipart', importFilePath: 'test/report/cucumber_report.json', importInfo: info, inputInfoSwitcher: 'fileContent', serverInstance: xrayConnectorId])
+                    step([$class: 'XrayImportBuilder', endpointName: '/cucumber/multipart', importFilePath: 'test/report/cucumber_report.json', importInfo: info, inputInfoSwitcher: 'fileContent', serverInstance: xrayConnectorId])
+                }
             }
         }
 }
