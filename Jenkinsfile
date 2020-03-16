@@ -1,13 +1,17 @@
 pipeline {
+
     agent {
         docker {
             image 'node:12-alpine'
         }
     }
+
     environment {
         HOME = '.'
     }
+
     stages {
+
         stage('Cucumber Test') {
             steps {
                 sh 'npm install'
@@ -24,6 +28,7 @@ pipeline {
                 )
             }
         }
+
         stage('Expose report') {
             steps{
                 archiveArtifacts "test/report/cucumber_report.json"
@@ -31,7 +36,9 @@ pipeline {
             }
             
         }
-        stage('Import results to Xray') {           
+
+        stage('Import results to Xray') {          
+
             def description = "[BUILD_URL|${env.BUILD_URL}]"
             def labels = '["regression","automated_regression"]'
             def environment = "DEV"
@@ -54,10 +61,6 @@ pipeline {
                 }'''
 
             echo info
-                
-            // steps {
-            //     step([$class: 'XrayImportBuilder', endpointName: '/cucumber/multipart', importFilePath: 'test/report/cucumber_report.json', importInfo: '''projectKey=CALC testExecutionFieldID=10008''', inputInfoSwitcher: 'fileContent', serverInstance: 'CLOUD-cb430a15-4fa5-4c52-bec2-7606bd1e7357'])
-            // }
         }
     }
 }
