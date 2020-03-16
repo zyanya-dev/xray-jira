@@ -32,7 +32,7 @@ pipeline {
             
         }
         stage('Import results to Xray') {           
-           /* def description = "[BUILD_URL|${env.BUILD_URL}]"
+            def description = "[BUILD_URL|${env.BUILD_URL}]"
             def labels = '["regression","automated_regression"]'
             def environment = "DEV"
             def testExecutionFieldId = 10008
@@ -53,10 +53,11 @@ pipeline {
                     }
                 }'''
 
-                echo info*/
-            steps {
-                step([$class: 'XrayImportBuilder', endpointName: '/cucumber/multipart', importFilePath: 'test/report/cucumber_report.json', importInfo: '''projectKey=CALC testExecutionFieldID=10008''', inputInfoSwitcher: 'fileContent', serverInstance: 'CLOUD-cb430a15-4fa5-4c52-bec2-7606bd1e7357'])
-            }
+            echo info
+                
+            // steps {
+            //     step([$class: 'XrayImportBuilder', endpointName: '/cucumber/multipart', importFilePath: 'test/report/cucumber_report.json', importInfo: '''projectKey=CALC testExecutionFieldID=10008''', inputInfoSwitcher: 'fileContent', serverInstance: 'CLOUD-cb430a15-4fa5-4c52-bec2-7606bd1e7357'])
+            // }
         }
     }
 }
