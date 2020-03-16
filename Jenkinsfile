@@ -32,8 +32,7 @@ pipeline {
             
         }
         stage('Import results to Xray') {
-            steps{
-
+             
                 def description = "[BUILD_URL|${env.BUILD_URL}]"
                 def labels = '["regression","automated_regression"]'
                 def environment = "DEV"
@@ -59,6 +58,6 @@ pipeline {
 
                     step([$class: 'XrayImportBuilder', endpointName: '/cucumber/multipart', importFilePath: 'test/report/cucumber_report.json', importInfo: info, inputInfoSwitcher: 'fileContent', serverInstance: xrayConnectorId])
                 }
-            }
+          
         }
 }
