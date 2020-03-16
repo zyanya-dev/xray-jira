@@ -26,8 +26,8 @@ pipeline {
         }
         stage('Expose report') {
             steps{
-                //archiveArtifacts "test/report/cucumber_report.json"
-                cucumber 'test/report/cucumber_report.json'
+                archiveArtifacts "test/report/cucumber_report.json"
+                //cucumber 'test/report/cucumber_report.json'
             }
             
         }
