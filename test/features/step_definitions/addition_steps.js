@@ -1,7 +1,7 @@
 
          const assert =  require('assert')
          const { Before, Given, When, Then } = require('cucumber')
-         const Calculator = require('../../lib/calculator');
+         const Calculator = require('../../../lib/calculator');
 
          let calculator;
          
