@@ -4,11 +4,12 @@ pipeline {
             image 'node:12-alpine'
         }
     }
+    environment {
+        HOME = '.'
+    }
     stages {
         stage('Test') {
             steps {
-                sh 'node --version'
-                sh 'npm --version'
                 sh 'npm install'
             }
         }
