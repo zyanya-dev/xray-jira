@@ -12,6 +12,17 @@ pipeline {
             steps {
                 sh 'npm install'
                 sh 'npm run test'
+                publishHTML (
+                    target: [
+                        allowMissing: false,
+                        alwaysLinkToLastBuild: true,
+                        keepAll: true,
+                        reportDir: 'test/report',
+                        reportFiles: 'cucumber_report.html',
+                        reportName: 'My cucumber reports',
+                        reportTitles: 'The Report'
+                    ]
+                )
             }
         }
     }
