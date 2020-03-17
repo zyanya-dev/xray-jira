@@ -5,7 +5,10 @@
   "main": "index.js",
   "scripts": {
     "test": "cucumber-js test/features/ -f json:test/report/cucumber_report.json --tags=@hello",
-    "buildReport": "node test/report/generateReport.js"
+    "buildReport": "node test/report/generateReport.js",
+    "failed":"exit 1",
+    "success":"exit 0"
+
   },
   "author": "",
   "license": "ISC",
