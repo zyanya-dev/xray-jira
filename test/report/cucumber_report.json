@@ -8,238 +8,6 @@
     "uri": "test/features/arithmetic.feature",
     "elements": [
       {
-        "id": "arithmetic;add-two-number",
-        "keyword": "Scenario",
-        "line": 10,
-        "name": "Add two number",
-        "tags": [
-          {
-            "name": "@hello",
-            "line": 3
-          },
-          {
-            "name": "@CALC-2",
-            "line": 3
-          }
-        ],
-        "type": "scenario",
-        "steps": [
-          {
-            "arguments": [],
-            "keyword": "Given ",
-            "line": 5,
-            "name": "the numbers 1 and 3",
-            "match": {
-              "location": "test/features/step_definitions/addition_steps.js:8"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 1000000
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "When ",
-            "line": 6,
-            "name": "they are added together",
-            "match": {
-              "location": "test/features/step_definitions/addition_steps.js:12"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 0
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "Then ",
-            "line": 7,
-            "name": "should the result be 4",
-            "match": {
-              "location": "test/features/step_definitions/addition_steps.js:33"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 0
-            }
-          }
-        ]
-      },
-      {
-        "id": "arithmetic;add-two-number",
-        "keyword": "Scenario",
-        "line": 11,
-        "name": "Add two number",
-        "tags": [
-          {
-            "name": "@hello",
-            "line": 3
-          },
-          {
-            "name": "@CALC-2",
-            "line": 3
-          }
-        ],
-        "type": "scenario",
-        "steps": [
-          {
-            "arguments": [],
-            "keyword": "Given ",
-            "line": 5,
-            "name": "the numbers 2 and 4",
-            "match": {
-              "location": "test/features/step_definitions/addition_steps.js:8"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 0
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "When ",
-            "line": 6,
-            "name": "they are added together",
-            "match": {
-              "location": "test/features/step_definitions/addition_steps.js:12"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 0
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "Then ",
-            "line": 7,
-            "name": "should the result be 6",
-            "match": {
-              "location": "test/features/step_definitions/addition_steps.js:33"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 0
-            }
-          }
-        ]
-      },
-      {
-        "id": "arithmetic;substract-two-number",
-        "keyword": "Scenario",
-        "line": 20,
-        "name": "Substract two number",
-        "tags": [
-          {
-            "name": "@hello",
-            "line": 13
-          },
-          {
-            "name": "@CALC-6",
-            "line": 13
-          }
-        ],
-        "type": "scenario",
-        "steps": [
-          {
-            "arguments": [],
-            "keyword": "Given ",
-            "line": 15,
-            "name": "the numbers 4 and 2",
-            "match": {
-              "location": "test/features/step_definitions/addition_steps.js:8"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 0
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "When ",
-            "line": 16,
-            "name": "they are subtracted together",
-            "match": {
-              "location": "test/features/step_definitions/addition_steps.js:17"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 0
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "Then ",
-            "line": 17,
-            "name": "should the result be 2",
-            "match": {
-              "location": "test/features/step_definitions/addition_steps.js:33"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 0
-            }
-          }
-        ]
-      },
-      {
-        "id": "arithmetic;substract-two-number",
-        "keyword": "Scenario",
-        "line": 21,
-        "name": "Substract two number",
-        "tags": [
-          {
-            "name": "@hello",
-            "line": 13
-          },
-          {
-            "name": "@CALC-6",
-            "line": 13
-          }
-        ],
-        "type": "scenario",
-        "steps": [
-          {
-            "arguments": [],
-            "keyword": "Given ",
-            "line": 15,
-            "name": "the numbers 6 and 1",
-            "match": {
-              "location": "test/features/step_definitions/addition_steps.js:8"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 0
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "When ",
-            "line": 16,
-            "name": "they are subtracted together",
-            "match": {
-              "location": "test/features/step_definitions/addition_steps.js:17"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 0
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "Then ",
-            "line": 17,
-            "name": "should the result be 5",
-            "match": {
-              "location": "test/features/step_definitions/addition_steps.js:33"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 0
-            }
-          }
-        ]
-      },
-      {
         "id": "arithmetic;multiply-two-number",
         "keyword": "Scenario",
         "line": 30,
@@ -266,7 +34,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 0
+              "duration": 1000000
             }
           },
           {
@@ -402,13 +170,14 @@
             "arguments": [],
             "keyword": "Then ",
             "line": 37,
-            "name": "should the result be 4",
+            "name": "should the result be 1",
             "match": {
               "location": "test/features/step_definitions/addition_steps.js:33"
             },
             "result": {
-              "status": "passed",
-              "duration": 0
+              "status": "failed",
+              "duration": 1000000,
+              "error_message": "AssertionError [ERR_ASSERTION]: 4 == 1\n    + expected - actual\n\n    -4\n    +1\n\n    at World.<anonymous> (/Users/eramos/OneDrive - Gap/Es Docs/Cucumber/test/features/step_definitions/addition_steps.js:34:20)"
             }
           }
         ]
