@@ -1,6 +1,6 @@
 Feature: Arithmetic
 
-@CALC-2
+@hello @CALC-2
   Scenario Outline: Add two number
     Given the numbers <number1> and <number2>
     When they are added together
@@ -10,7 +10,7 @@ Feature: Arithmetic
     | 1  | 3  | 4  |
     | 2  | 4  | 6  |
 
-@CALC-6
+@hello @CALC-6
 Scenario Outline: Substract two number
     Given the numbers <number1> and <number2>
     When they are subtracted together
@@ -37,5 +37,5 @@ Scenario Outline: Divide two number
     Then should the result be <result>
     Examples:
     | number1 | number2 | result |
-    | 8  | 2  | 1  |
+    | 8  | 2  | 4  |
     | 6  | 2  | 3  |
