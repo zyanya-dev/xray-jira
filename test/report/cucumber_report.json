@@ -163,7 +163,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 0
+              "duration": 1000000
             }
           },
           {
@@ -337,7 +337,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 0
+              "duration": 1000000
             }
           },
           {
@@ -402,14 +402,13 @@
             "arguments": [],
             "keyword": "Then ",
             "line": 37,
-            "name": "should the result be 1",
+            "name": "should the result be 4",
             "match": {
               "location": "test/features/step_definitions/addition_steps.js:33"
             },
             "result": {
-              "status": "failed",
-              "duration": 1000000,
-              "error_message": "AssertionError [ERR_ASSERTION]: 4 == 1\n    + expected - actual\n\n    -4\n    +1\n\n    at World.<anonymous> (/Users/eramos/OneDrive - Gap/Es Docs/Cucumber/test/features/step_definitions/addition_steps.js:34:20)"
+              "status": "passed",
+              "duration": 0
             }
           }
         ]
