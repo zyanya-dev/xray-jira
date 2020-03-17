@@ -38,4 +38,4 @@ Scenario Outline: Divide two number
     Examples:
     | number1 | number2 | result |
     | 8  | 2  | 4 |
-    | 6  | 2  | 3  |
+    | 6  | 2  | 1  |
