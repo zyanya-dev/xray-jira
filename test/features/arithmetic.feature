@@ -8,7 +8,7 @@ Feature: Arithmetic
     Examples:
     | number1 | number2 | result |
     | 1  | 3  | 4  |
-    | 2  | 4  | 6  |
+    | 2  | 4  | 8  |
 
 @hello @CALC-6
 Scenario Outline: Substract two number
