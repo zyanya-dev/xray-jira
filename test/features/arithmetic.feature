@@ -37,5 +37,5 @@ Scenario Outline: Divide two number
     Then should the result be <result>
     Examples:
     | number1 | number2 | result |
-    | 8  | 2  | 1  |
+    | 8  | 2  | 4 |
     | 6  | 2  | 3  |
