@@ -9,7 +9,7 @@ Feature: Arithmetic
     | number1 | number2 | result |
     | 1  | 3  | 4  |
     | 2  | 4  | 6  |
-    | 1  | 2  | 3  |
+    | 1  | 2  | 4  |
 
 @hello @CALC-6
 Scenario Outline: Substract two number
