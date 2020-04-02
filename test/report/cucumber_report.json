@@ -176,7 +176,7 @@
             },
             "result": {
               "status": "failed",
-              "duration": 1000000,
+              "duration": 2000000,
               "error_message": "AssertionError [ERR_ASSERTION]: 3 == 4\n    + expected - actual\n\n    -3\n    +4\n\n    at World.<anonymous> (/Users/eramos/OneDrive - Gap/Es Docs/Cucumber/test/features/step_definitions/addition_steps.js:34:20)"
             }
           }
@@ -235,7 +235,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 0
+              "duration": 1000000
             }
           }
         ]
@@ -267,7 +267,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 1000000
+              "duration": 0
             }
           },
           {
